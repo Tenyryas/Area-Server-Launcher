@@ -5,4 +5,4 @@ A launcher for the .hack//Frägment Area server that allows you to run multiple 
 
 # How to use
 
-Drop it into your Area Server folders, and drag & drop Netslum_server.exe on it. Each server needs it's own folder.
+Drop it into your Area Server folders, and double click. Each server needs it's own folder.
