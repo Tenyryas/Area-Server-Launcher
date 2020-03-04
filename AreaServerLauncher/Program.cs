@@ -14,8 +14,8 @@ namespace AreaServerThing
                 bool cleanExit = false;
                 do
                 {
-                    Aserver = Win32APIs.MutexKiller.RunProgramAndKillMutex("AREASERVER.exe", "AREA SERVER", true);
-                    Console.WriteLine("Waiting untill Area Server is Closed");
+                    Aserver = Win32APIs.MutexKiller.RunProgramAndKillMutex("NETSLUM_SERVER.exe", "AREA SERVER", true);
+                    Console.WriteLine("Waiting until Area Server is Closed");
                     Aserver.WaitForExit();
                     //0 = normal
                     //1 = killed by task manager
@@ -24,7 +24,7 @@ namespace AreaServerThing
                     Console.WriteLine("ExitCode: " + Aserver.ExitCode.ToString());
                     if (Aserver.ExitCode != 0)
                     {
-                        Console.WriteLine("Detected unexpeted exit, relaunching");
+                        Console.WriteLine("Detected unexpected exit, relaunching");
                     }
                     else
                     {
@@ -34,7 +34,7 @@ namespace AreaServerThing
             }
             else
             {
-                Aserver = Win32APIs.MutexKiller.RunProgramAndKillMutex("AREASERVER.exe", "AREA SERVER");
+                Aserver = Win32APIs.MutexKiller.RunProgramAndKillMutex("NETSLUM_SERVER.exe", "AREA SERVER");
             }
             System.Threading.Thread.Sleep(1000);
             //Console.ReadKey();
